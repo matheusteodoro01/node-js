@@ -5,7 +5,6 @@ function requestHandler(req, res) {
   if (req.url === "/data") {
     const child = fork("index.mjs");
    
-
     console.log("Processo filho criado com ID: ", child.pid);
 
     child.on("message", (message) => {

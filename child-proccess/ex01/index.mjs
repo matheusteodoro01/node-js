@@ -3,7 +3,6 @@ import { task } from "./task.mjs";
 
 const requestHandler = async (req, res) => {
   if (req.url === "/data") {
-    for (let index = 0; index < 1000000000000000000000000000n; index++) {}
     const data = await task();
     res.setHeader("Content-Type", "application/json");
     return res.end(JSON.stringify(data));
